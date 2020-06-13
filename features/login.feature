@@ -1,15 +1,11 @@
-#Language: pt
-#Language: en
+#language: pt
 
 Funcionalidade: Login
     Para que eu possa gerenciar os filmes no catálogo Ninjaflix
     Sendo um usuário previamente cadastrado
     Posso acessar o sistema com o meu email e senha
 
-    #So that I can manage the movies in the Ninjaflix catalog
-    # Being a previously registered user
-    # I can access the system with my email and password
-
+@login
 Cenario: Acesso
     Quando eu faço login com "example" e "password"
     Então devo ser atenticado
