@@ -1,3 +1,8 @@
-### Repository to keep the test code used to test the ninjaflix aplication (aplication: available in this course https://play.qaninja.io/cursos/cucumber-rspec-e-capybara-avancado) with
+### Repository to keep the test code used to test the ninjaflix aplication (aplication: available in this course https://play.qaninja.io/cursos/cucumber-rspec-e-capybara-avancado) 
 
-- Cucumber, Capybara and RSpec;
+#### using:
+
+- BDD (Behavior Driven Development) for the product specification;
+- PO (Page Objects) as a test development pattern
+- Cucumber, Capybara and RSpec to automate;
+
