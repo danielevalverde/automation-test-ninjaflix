@@ -10,7 +10,7 @@ Cenario: Acesso
     Quando eu faço login com "tony@stark.com" e "pwd123"
     Então devo ser atenticado
     E devo ver "Tony Stark" na área logada
-
+@login-with-wrong-password
 Cenario: Senha invalida
     Quando eu faço login com "tony@stark.com" e "senha"
     Então não devo ser autenticado
