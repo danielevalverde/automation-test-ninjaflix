@@ -15,13 +15,13 @@ Cenario: Acesso
 Esquema do Cenario: Logim sem sucesso
     Quando eu faço login com <email> e <senha>
     Então não devo ser autenticado
-    E devo ver a mensagem de alerta <texto>
+    E devo ver a mensagem de alerta <expected_msgm>
 
     Exemplos: 
-        | email                |senha       | texto                                 |
-        | "tony@stark.com"     |  "senha"   | "email ou senha inválida"             |
-        | "tony@.com"          |  "senha"   | "usuário não cadastrado"              |
-        |       " "            |  "senha"   | "Campo de e-mail deve ser preenchido" |
-        | "tony@stark.com"     |       " "  | "Campo de senha deve ser preenchido"  |
+        | email                |senha       | expected_msgm                      |
+        | "tony@stark.com"     |  "senha"   | "Usuário e/ou senha inválidos"     |
+        | "tony@.com"          |  "senha"   | "Usuário e/ou senha inválidos"     |
+        |       ""             |  "senha"   | "Opps. Cadê o email?"              |
+        | "tony@stark.com"     |       ""   | "Opps. Cadê a senha?"              |
 
 # O teste será reexecutado enquanto tiver linhas na coluna, ou seja 4 vezes para este caso, substituindo os "placeholders" pelos dados nas colunas com os nomes correspondentes

@@ -9,9 +9,9 @@ Então(/^devo ser atenticado$/) do
   expect(find(".search-form")).to_not be nil
 end
 
-Então(/^devo ver "([^"]*)" na área logada$/) do |expect_name|
+Então(/^devo ver "([^"]*)" na área logada$/) do |expected_name|
   user = find(".sidebar-wrapper .user .info span")
-  expect(user.text).to eql expect_name
+  expect(user.text).to eql expected_name
 end
 
 Então(/^não devo ser autenticado$/) do
@@ -19,7 +19,13 @@ Então(/^não devo ser autenticado$/) do
   expect(page).to_not have_content "Cadastro de filmes"
 end
 
-Então(/^devo ver a mensagem de alerta "([^"]*)"$/) do |arg1|
+Então(/^devo ver a mensagem de alerta "([^"]*)"$/) do |expected_msgm|
   alert = find(".alert")
-  expect(alert.text).to eql "Usuário e/ou senha inválidos"
+  expect(alert.text).to eql expected_msgm
+  expect(page).to have_content expected_msgm
 end
+
+
+# Então(/^devo ver a mensagem de alerta "([^"]*)"$/) do |expected_bane|
+#   pending # Write code here that turns the phrase above into concrete actions
+# end
