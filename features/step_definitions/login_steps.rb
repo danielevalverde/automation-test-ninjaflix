@@ -1,8 +1,7 @@
 Quando(/^eu faço login com "([^"]*)" e "([^"]*)"$/) do |email, senha|
-  visit "/"
-  find("#emailId").set email
-  find("#passId").set senha
-  click_button "Entrar"
+  @login = LoginPage.new
+  @login.go
+  @login.log_in(email,senha)
 end
   
 Então(/^devo ser atenticado$/) do
