@@ -5,4 +5,3 @@
 - BDD (Behavior Driven Development) for the product specification;
 - PO (Page Objects) as a test development pattern;
 - Cucumber, Capybara and RSpec to automate;
-
